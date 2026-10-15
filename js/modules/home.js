@@ -31,6 +31,9 @@ export class HomeModule extends Module {
           <button type="button" class="btn btn--primary" data-go="1">
             Explore Section 1
           </button>
+          <button type="button" class="btn btn--secondary" data-go="67">
+            Open Study page
+          </button>
           <button type="button" class="btn btn--secondary" data-go="99">
             Open Settings
           </button>

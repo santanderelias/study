@@ -7,6 +7,7 @@ import { NavbarModule } from './modules/navbar.js';
 import { HomeModule } from './modules/home.js';
 import { Section1Module } from './modules/section1.js';
 import { Section2Module } from './modules/section2/index.js';
+import { Section67Module } from './modules/section67/index.js';
 import { SettingsModule, applyTheme, getStoredTheme } from './modules/settings.js';
 
 async function boot() {
