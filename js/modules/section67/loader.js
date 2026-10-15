@@ -59,13 +59,13 @@ export function loadStylesheet(href, id) {
 }
 
 /**
- * Rewrite [data-s2-asset] (or custom attr) image sources to absolute module URLs.
+ * Rewrite [data-s67-asset] (or custom attr) image sources to absolute module URLs.
  * @param {HTMLElement} root
  * @param {string | URL} baseUrl  import.meta.url of the package entry
- * @param {string} [attr='data-s2-asset']
+ * @param {string} [attr='data-s67-asset']
  * @param {string} [assetsDir='./assets/']
  */
-export function bindAssets(root, baseUrl, attr = 'data-s2-asset', assetsDir = './assets/') {
+export function bindAssets(root, baseUrl, attr = 'data-s67-asset', assetsDir = './assets/') {
   root.querySelectorAll(`[${attr}]`).forEach((el) => {
     const name = el.getAttribute(attr);
     if (!name) return;

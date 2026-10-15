@@ -1,15 +1,15 @@
 /* ==========================================================================
-   Section 2 submodule styles
-   Loaded dynamically by js/modules/section2/index.js
-   Scoped under #module-2 / .s2-* to avoid leaking globally
+   Section 67 submodule styles
+   Loaded dynamically by js/modules/section67/index.js
+   Scoped under #module-67 / .s67-* to avoid leaking globally
    ========================================================================== */
 
-#module-2.s2-ready {
+#module-67.s67-ready {
   /* marker class after content + css are loaded */
 }
 
 /* --- Header accent --- */
-#module-2 .s2-header h1 {
+#module-67 .s67-header h1 {
   background: linear-gradient(120deg, var(--primary), var(--accent));
   -webkit-background-clip: text;
   background-clip: text;
@@ -17,7 +17,7 @@
 }
 
 /* --- Banner --- */
-#module-2 .s2-banner-wrap {
+#module-67 .s67-banner-wrap {
   margin: 0 0 1.75rem;
   border-radius: var(--radius);
   overflow: hidden;
@@ -26,7 +26,7 @@
   box-shadow: var(--shadow);
 }
 
-#module-2 .s2-banner {
+#module-67 .s67-banner {
   width: 100%;
   height: auto;
   display: block;
@@ -35,14 +35,14 @@
   background: var(--bg-muted);
 }
 
-#module-2 .s2-banner-caption {
+#module-67 .s67-banner-caption {
   padding: 0.55rem 0.85rem 0.7rem;
   font-size: 0.8rem;
   color: var(--text-muted);
   border-top: 1px solid var(--border);
 }
 
-#module-2 .s2-banner-caption code {
+#module-67 .s67-banner-caption code {
   font-size: 0.75rem;
   padding: 0.1rem 0.35rem;
   border-radius: 4px;
@@ -50,7 +50,7 @@
 }
 
 /* --- Cards (module-local grid) --- */
-#module-2 .s2-card-grid {
+#module-67 .s67-card-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
@@ -58,18 +58,18 @@
 }
 
 @media (min-width: 540px) {
-  #module-2 .s2-card-grid {
+  #module-67 .s67-card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 900px) {
-  #module-2 .s2-card-grid {
+  #module-67 .s67-card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-#module-2 .s2-card {
+#module-67 .s67-card {
   background: var(--bg-elevated);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -81,7 +81,7 @@
   overflow: hidden;
 }
 
-#module-2 .s2-card::before {
+#module-67 .s67-card::before {
   content: "";
   position: absolute;
   inset: 0 0 auto 0;
@@ -91,17 +91,17 @@
   transition: opacity var(--transition);
 }
 
-#module-2 .s2-card:hover {
+#module-67 .s67-card:hover {
   border-color: var(--primary);
   box-shadow: var(--shadow-lg);
   transform: translateY(-2px);
 }
 
-#module-2 .s2-card:hover::before {
+#module-67 .s67-card:hover::before {
   opacity: 1;
 }
 
-#module-2 .s2-card__icon {
+#module-67 .s67-card__icon {
   width: 40px;
   height: 40px;
   border-radius: 10px;
@@ -115,26 +115,26 @@
   font-weight: 700;
 }
 
-#module-2 .s2-card h3 {
+#module-67 .s67-card h3 {
   font-size: 1.05rem;
   margin-bottom: 0.4rem;
   letter-spacing: -0.02em;
 }
 
-#module-2 .s2-card p {
+#module-67 .s67-card p {
   color: var(--text-muted);
   font-size: 0.9rem;
   margin-bottom: 0.85rem;
 }
 
-#module-2 .s2-card__meta {
+#module-67 .s67-card__meta {
   font-size: 0.8rem;
   color: var(--text-muted);
   font-weight: 500;
 }
 
 /* --- Panels --- */
-#module-2 .s2-panel {
+#module-67 .s67-panel {
   background: var(--bg-elevated);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -143,45 +143,45 @@
   box-shadow: var(--shadow);
 }
 
-#module-2 .s2-panel h2 {
+#module-67 .s67-panel h2 {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
   letter-spacing: -0.02em;
 }
 
-#module-2 .s2-panel__text {
+#module-67 .s67-panel__text {
   color: var(--text-muted);
   font-size: 0.925rem;
   margin-bottom: 1rem;
 }
 
-#module-2 .s2-panel code {
+#module-67 .s67-panel code {
   font-size: 0.85em;
   padding: 0.1rem 0.35rem;
   border-radius: 4px;
   background: var(--bg-muted);
 }
 
-#module-2 .s2-list {
+#module-67 .s67-list {
   list-style: disc;
   padding-left: 1.25rem;
   color: var(--text-muted);
   font-size: 0.925rem;
 }
 
-#module-2 .s2-list li {
+#module-67 .s67-list li {
   margin-bottom: 0.4rem;
 }
 
 /* --- Counter widget --- */
-#module-2 .s2-counter {
+#module-67 .s67-counter {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
 }
 
-#module-2 .s2-counter__value {
+#module-67 .s67-counter__value {
   min-width: 3.5rem;
   font-size: 2rem;
   font-weight: 800;
@@ -191,13 +191,13 @@
   line-height: 1;
 }
 
-#module-2 .s2-counter__actions {
+#module-67 .s67-counter__actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
 
-#module-2 .s2-btn {
+#module-67 .s67-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -212,44 +212,44 @@
     border-color var(--transition);
 }
 
-#module-2 .s2-btn:focus-visible {
+#module-67 .s67-btn:focus-visible {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
-#module-2 .s2-btn--primary {
+#module-67 .s67-btn--primary {
   background: var(--primary);
   color: #fff;
 }
 
-#module-2 .s2-btn--primary:hover {
+#module-67 .s67-btn--primary:hover {
   background: var(--primary-hover);
 }
 
-#module-2 .s2-btn--ghost {
+#module-67 .s67-btn--ghost {
   background: var(--bg);
   border-color: var(--border);
   color: var(--text);
 }
 
-#module-2 .s2-btn--ghost:hover {
+#module-67 .s67-btn--ghost:hover {
   border-color: var(--primary);
   color: var(--primary);
   background: var(--primary-soft);
 }
 
-#module-2 .s2-btn--muted {
+#module-67 .s67-btn--muted {
   background: var(--bg-muted);
   color: var(--text-muted);
   border-color: var(--border);
 }
 
-#module-2 .s2-btn--muted:hover {
+#module-67 .s67-btn--muted:hover {
   color: var(--text);
 }
 
 /* --- Footer --- */
-#module-2 .s2-footer {
+#module-67 .s67-footer {
   margin-top: 1.5rem;
   padding-top: 1rem;
   border-top: 1px solid var(--border);
@@ -259,12 +259,12 @@
 }
 
 /* --- Loading / error states --- */
-#module-2 .s2-status {
+#module-67 .s67-status {
   padding: 2rem 1rem;
   text-align: center;
   color: var(--text-muted);
 }
 
-#module-2 .s2-status--error {
+#module-67 .s67-status--error {
   color: var(--danger);
 }

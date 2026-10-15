@@ -1,11 +1,11 @@
 /**
- * Section 2 — module 2 (submodule package)
+ * Section 67 — module 67 (submodule package)
  *
  * Folder layout:
- *   section2/
+ *   section67/
  *     index.js       ← this file (orchestrator entry)
  *     content.html   ← markup injected here (no HTML strings in JS)
- *     section2.css   ← module-local styles
+ *     section67.css   ← module-local styles
  *     counter.js     ← optional behavior submodule
  *     loader.js      ← shared load helpers for this package
  *     assets/
@@ -35,7 +35,7 @@ export class Section67Module extends Module {
    */
   render() {
     return `
-      <div class="s2-status" data-s2-status role="status">
+      <div class="s67-status" data-s67-status role="status">
         Loading Section 67…
       </div>
     `;
@@ -48,23 +48,23 @@ export class Section67Module extends Module {
   async load() {
     if (!this.element || this._loaded) return;
 
-    const status = this.element.querySelector('[data-s2-status]');
+    const status = this.element.querySelector('[data-s67-status]');
 
     try {
-      const cssUrl = resolveAsset('./section2.css', import.meta.url);
+      const cssUrl = resolveAsset('./section67.css', import.meta.url);
       const htmlUrl = resolveAsset('./content.html', import.meta.url);
 
-      await loadStylesheet(cssUrl, 'module-css-section2');
+      await loadStylesheet(cssUrl, 'module-css-section67');
       const html = await fetchText(htmlUrl);
 
       this.element.innerHTML = html;
-      this.element.classList.add('s2-ready');
+      this.element.classList.add('s67-ready');
 
       // Point images at package assets (paths relative to page won't work for injected HTML)
       bindAssets(this.element, import.meta.url);
 
       // Wire extra JS submodule
-      const counterRoot = this.element.querySelector('[data-s2-counter]');
+      const counterRoot = this.element.querySelector('[data-s67-counter]');
       if (counterRoot instanceof HTMLElement) {
         this._counter = initCounter(counterRoot);
       }
@@ -73,12 +73,12 @@ export class Section67Module extends Module {
     } catch (err) {
       console.error('[Section67]', err);
       if (status) {
-        status.classList.add('s2-status--error');
+        status.classList.add('s67-status--error');
         status.textContent =
           'Could not load Section 67 package. Serve the app over HTTP so content.html and CSS can be fetched.';
       } else if (this.element) {
         this.element.innerHTML = `
-          <div class="s2-status s2-status--error" role="alert">
+          <div class="s67-status s67-status--error" role="alert">
             Could not load Section 67 package.
           </div>
         `;

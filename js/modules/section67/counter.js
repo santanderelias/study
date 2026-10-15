@@ -1,17 +1,17 @@
 /**
- * Section 2 submodule — local interactive counter.
- * Only used inside the section2 package.
+ * Section 67 submodule — local interactive counter.
+ * Only used inside the section67 package.
  */
 
 /**
- * @param {HTMLElement} root  Element with [data-s2-counter]
+ * @param {HTMLElement} root  Element with [data-s67-counter]
  * @returns {{ destroy: () => void }}
  */
 export function initCounter(root) {
-  const valueEl = root.querySelector('[data-s2-counter-value]');
-  const incBtn = root.querySelector('[data-s2-counter-inc]');
-  const decBtn = root.querySelector('[data-s2-counter-dec]');
-  const resetBtn = root.querySelector('[data-s2-counter-reset]');
+  const valueEl = root.querySelector('[data-s67-counter-value]');
+  const incBtn = root.querySelector('[data-s67-counter-inc]');
+  const decBtn = root.querySelector('[data-s67-counter-dec]');
+  const resetBtn = root.querySelector('[data-s67-counter-reset]');
 
   let value = 0;
 

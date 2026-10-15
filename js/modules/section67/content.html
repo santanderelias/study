@@ -1,77 +1,77 @@
-<header class="page-header s2-header">
-  <h1>Section 22</h1>
+<header class="page-header s67-header">
+  <h1>Section 67</h1>
   <p>
     This view is aa <strong>submodule package</strong>: markup, styles, assets,
     and extra scripts live in their own folder. The module only loads and wires them.
   </p>
 </header>
 
-<figure class="s2-banner-wrap">
+<figure class="s67-banner-wrap">
   <img
-    class="s2-banner"
-    data-s2-asset="banner.svg"
-    alt="Abstract modular grid illustration for Section 2"
+    class="s67-banner"
+    data-s67-asset="banner.svg"
+    alt="Abstract modular grid illustration for Section 67"
     width="960"
     height="320"
   />
-  <figcaption class="s2-banner-caption">
-    Banner image loaded from <code>section2/assets/banner.svg</code>
+  <figcaption class="s67-banner-caption">
+    Banner image loaded from <code>section67/assets/banner.svg</code>
   </figcaption>
 </figure>
 
-<div class="s2-card-grid">
-  <article class="s2-card">
-    <div class="s2-card__icon" aria-hidden="true">★</div>
+<div class="s67-card-grid">
+  <article class="s67-card">
+    <div class="s67-card__icon" aria-hidden="true">★</div>
     <h3>Card Alpha</h3>
     <p>Placeholder card for a product, post, or metric summary.</p>
-    <span class="s2-card__meta">Category · Demo</span>
+    <span class="s67-card__meta">Category · Demo</span>
   </article>
-  <article class="s2-card">
-    <div class="s2-card__icon" aria-hidden="true">◆</div>
+  <article class="s67-card">
+    <div class="s67-card__icon" aria-hidden="true">◆</div>
     <h3>Card Beta</h3>
     <p>Second sample card. Layout reflows from one to three columns.</p>
-    <span class="s2-card__meta">Category · Demo</span>
+    <span class="s67-card__meta">Category · Demo</span>
   </article>
-  <article class="s2-card">
-    <div class="s2-card__icon" aria-hidden="true">●</div>
+  <article class="s67-card">
+    <div class="s67-card__icon" aria-hidden="true">●</div>
     <h3>Card Gamma</h3>
     <p>Third sample card with muted meta text under the description.</p>
-    <span class="s2-card__meta">Category · Demo</span>
+    <span class="s67-card__meta">Category · Demo</span>
   </article>
-  <article class="s2-card">
-    <div class="s2-card__icon" aria-hidden="true">■</div>
+  <article class="s67-card">
+    <div class="s67-card__icon" aria-hidden="true">■</div>
     <h3>Card Delta</h3>
     <p>Extra card to demonstrate the responsive grid on wider screens.</p>
-    <span class="s2-card__meta">Category · Demo</span>
+    <span class="s67-card__meta">Category · Demo</span>
   </article>
 </div>
 
-<section class="s2-panel" aria-labelledby="s2-counter-title">
-  <h2 id="s2-counter-title">Submodule demo: local counter</h2>
-  <p class="s2-panel__text">
+<section class="s67-panel" aria-labelledby="s67-counter-title">
+  <h2 id="s67-counter-title">Submodule demo: local counter</h2>
+  <p class="s67-panel__text">
     Extra JS lives in <code>counter.js</code> and only runs for this section.
   </p>
-  <div class="s2-counter" data-s2-counter>
-    <span class="s2-counter__value" data-s2-counter-value>0</span>
-    <div class="s2-counter__actions">
-      <button type="button" class="s2-btn s2-btn--ghost" data-s2-counter-dec aria-label="Decrease">−</button>
-      <button type="button" class="s2-btn s2-btn--primary" data-s2-counter-inc aria-label="Increase">+</button>
-      <button type="button" class="s2-btn s2-btn--muted" data-s2-counter-reset>Reset</button>
+  <div class="s67-counter" data-s67-counter>
+    <span class="s67-counter__value" data-s67-counter-value>0</span>
+    <div class="s67-counter__actions">
+      <button type="button" class="s67-btn s67-btn--ghost" data-s67-counter-dec aria-label="Decrease">−</button>
+      <button type="button" class="s67-btn s67-btn--primary" data-s67-counter-inc aria-label="Increase">+</button>
+      <button type="button" class="s67-btn s67-btn--muted" data-s67-counter-reset>Reset</button>
     </div>
   </div>
 </section>
 
-<div class="s2-panel">
+<div class="s67-panel">
   <h2>How this package is structured</h2>
-  <ul class="s2-list">
+  <ul class="s67-list">
     <li><code>index.js</code> — module entry (orchestrator registers this)</li>
     <li><code>content.html</code> — markup injected at runtime (no HTML strings in JS)</li>
-    <li><code>section2.css</code> — styles scoped to this module</li>
+    <li><code>section67.css</code> — styles scoped to this module</li>
     <li><code>assets/banner.svg</code> — image resolved via <code>import.meta.url</code></li>
     <li><code>counter.js</code> — optional submodule behavior</li>
   </ul>
 </div>
 
-<footer class="s2-footer">
-  Module 2 · Section 2 (submodule package)
+<footer class="s67-footer">
+  Module 67 · Section 67 (submodule package)
 </footer>
