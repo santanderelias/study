@@ -1,7 +1,8 @@
+<!-- Updated heading to Section 67 from Section 22 -->
 <header class="page-header s2-header">
-  <h1>Section 22</h1>
+  <h1>Section 67</h1>
   <p>
-    This view is aa <strong>submodule package</strong>: markup, styles, assets,
+    This view is a <strong>submodule package</strong>: markup, styles, assets,
     and extra scripts live in their own folder. The module only loads and wires them.
   </p>
 </header>
@@ -10,12 +11,13 @@
   <img
     class="s2-banner"
     data-s2-asset="banner.svg"
-    alt="Abstract modular grid illustration for Section 2"
+    alt="Abstract modular grid illustration for Section 67"
     width="960"
     height="320"
   />
+  <!-- Updated caption code reference to section67/assets/banner.svg -->
   <figcaption class="s2-banner-caption">
-    Banner image loaded from <code>section2/assets/banner.svg</code>
+    Banner image loaded from <code>section67/assets/banner.svg</code>
   </figcaption>
 </figure>
 
@@ -61,17 +63,19 @@
   </div>
 </section>
 
+<!-- Updated CSS reference list item to section67.css -->
 <div class="s2-panel">
   <h2>How this package is structured</h2>
   <ul class="s2-list">
     <li><code>index.js</code> — module entry (orchestrator registers this)</li>
     <li><code>content.html</code> — markup injected at runtime (no HTML strings in JS)</li>
-    <li><code>section2.css</code> — styles scoped to this module</li>
+    <li><code>section67.css</code> — styles scoped to this module</li>
     <li><code>assets/banner.svg</code> — image resolved via <code>import.meta.url</code></li>
     <li><code>counter.js</code> — optional submodule behavior</li>
   </ul>
 </div>
 
+<!-- Updated footer label to Section 67 -->
 <footer class="s2-footer">
-  Module 2 · Section 2 (submodule package)
+  Module 67 · Section 67 (submodule package)
 </footer>

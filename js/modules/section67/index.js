@@ -1,11 +1,11 @@
 /**
- * Section 2 — module 2 (submodule package)
+ * Section 67 — module 67 (submodule package)
  *
  * Folder layout:
- *   section2/
+ *   section67/
  *     index.js       ← this file (orchestrator entry)
  *     content.html   ← markup injected here (no HTML strings in JS)
- *     section2.css   ← module-local styles
+ *     section67.css  ← module-local styles
  *     counter.js     ← optional behavior submodule
  *     loader.js      ← shared load helpers for this package
  *     assets/
@@ -51,10 +51,12 @@ export class Section67Module extends Module {
     const status = this.element.querySelector('[data-s2-status]');
 
     try {
-      const cssUrl = resolveAsset('./section2.css', import.meta.url);
+      // Changed CSS file path to point to section67.css instead of section2.css
+      const cssUrl = resolveAsset('./section67.css', import.meta.url);
       const htmlUrl = resolveAsset('./content.html', import.meta.url);
 
-      await loadStylesheet(cssUrl, 'module-css-section2');
+      // Changed stylesheet link element ID to module-css-section67 so Section 67 gets its own loaded stylesheet
+      await loadStylesheet(cssUrl, 'module-css-section67');
       const html = await fetchText(htmlUrl);
 
       this.element.innerHTML = html;
