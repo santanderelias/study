@@ -28,6 +28,7 @@ async function boot() {
   await orchestrator.register(new HomeModule(orchestrator));
   await orchestrator.register(new Section1Module());
   await orchestrator.register(new Section2Module());
+  await orchestrator.register(new Section67Module());
   await orchestrator.register(new SettingsModule());
 
   // Navbar is not a page module; it always stays mounted
