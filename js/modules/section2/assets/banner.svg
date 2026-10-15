@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320" role="img" aria-label="Modular grid banner">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="55%" stop-color="#3b6ef5"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </linearGradient>
+    <linearGradient id="tile" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="320" fill="url(#bg)"/>
+
+  <!-- subtle grid -->
+  <g stroke="#ffffff" stroke-opacity="0.08" stroke-width="1">
+    <path d="M0 64h960M0 128h960M0 192h960M0 256h960"/>
+    <path d="M120 0v320M240 0v320M360 0v320M480 0v320M600 0v320M720 0v320M840 0v320"/>
+  </g>
+
+  <!-- modular blocks -->
+  <g filter="url(#soft)">
+    <rect x="72" y="56" width="160" height="100" rx="14" fill="url(#tile)" stroke="#fff" stroke-opacity="0.35"/>
+    <rect x="252" y="56" width="120" height="100" rx="14" fill="url(#tile)" stroke="#fff" stroke-opacity="0.25"/>
+    <rect x="392" y="56" width="200" height="48" rx="12" fill="url(#tile)" stroke="#fff" stroke-opacity="0.3"/>
+    <rect x="392" y="120" width="96" height="36" rx="10" fill="url(#tile)" stroke="#fff" stroke-opacity="0.2"/>
+    <rect x="508" y="120" width="84" height="36" rx="10" fill="url(#tile)" stroke="#fff" stroke-opacity="0.2"/>
+
+    <rect x="72" y="176" width="100" height="88" rx="14" fill="url(#tile)" stroke="#fff" stroke-opacity="0.28"/>
+    <rect x="192" y="176" width="180" height="88" rx="14" fill="url(#tile)" stroke="#fff" stroke-opacity="0.32"/>
+    <rect x="392" y="176" width="140" height="88" rx="14" fill="url(#tile)" stroke="#fff" stroke-opacity="0.25"/>
+  </g>
+
+  <!-- accent dots -->
+  <circle cx="720" cy="100" r="28" fill="#2dd4bf" fill-opacity="0.85"/>
+  <circle cx="780" cy="160" r="18" fill="#ffffff" fill-opacity="0.35"/>
+  <circle cx="830" cy="90" r="12" fill="#ffffff" fill-opacity="0.5"/>
+  <rect x="700" y="200" width="160" height="56" rx="16" fill="#ffffff" fill-opacity="0.12" stroke="#fff" stroke-opacity="0.4"/>
+
+  <text x="720" y="234" fill="#ffffff" font-family="system-ui,sans-serif" font-size="18" font-weight="700" letter-spacing="0.5">Section 2</text>
+</svg>
