@@ -4,10 +4,7 @@
 
 import { orchestrator } from './orchestrator.js';
 import { NavbarModule } from './modules/navbar.js';
-import { HomeModule } from './modules/home.js';
-import { Section1Module } from './modules/section1.js';
-import { Section2Module } from './modules/section2/index.js';
-import { Section67Module } from './modules/section67/index.js';
+import { LibraryModule } from './modules/library/index.js';
 import { SettingsModule, applyTheme, getStoredTheme } from './modules/settings.js';
 
 async function boot() {
@@ -24,11 +21,8 @@ async function boot() {
 
   orchestrator.init(moduleRoot);
 
-  // Register page modules (0, 1, 2, 99) — await so submodule packages finish load()
-  await orchestrator.register(new HomeModule(orchestrator));
-  await orchestrator.register(new Section1Module());
-  await orchestrator.register(new Section2Module());
-  await orchestrator.register(new Section67Module());
+  // Register active page modules: Library (0) and Settings (99)
+  await orchestrator.register(new LibraryModule(orchestrator));
   await orchestrator.register(new SettingsModule());
 
   // Navbar is not a page module; it always stays mounted

@@ -61,6 +61,10 @@ export class LibraryModule extends Module {
     `;
   }
 
+  afterMount() {
+    this.start();
+  }
+
   start() {
     if (!this.element) return;
     this.element.addEventListener('click', (event) => this.onClick(event));

@@ -438,6 +438,14 @@ function isInlineMath(inner) {
 function formatInline(text, tokens) {
   let html = '';
   let i = 0;
+
+  // Highlight textbook / citation references e.g. (Mankiw, Cap. 31) or Mankiw, Cap. 31
+  const bibMatch = /^(\((?:Mankiw|Blanchard|De Gregorio)[^)]+\)|(?:Mankiw|Blanchard|De Gregorio),\s*Cap\.?\s*\d+)/i.exec(text);
+  if (bibMatch) {
+    const citation = bibMatch[1];
+    return `<cite class="bib-chip">${escapeHtml(citation)}</cite>` + formatInline(text.slice(citation.length), tokens);
+  }
+
   while (i < text.length) {
     if (text.startsWith(TOKEN, i)) {
       const end = text.indexOf(TOKEN, i + 1);
@@ -540,8 +548,13 @@ function renderPieces(blocks, index, parentLevel) {
         body += renderLeaf(next);
         i += 1;
       }
+      const isChapter = /^Capítulo\s+\d+/i.test(block.plain);
+      const chapterClass = isChapter ? ' piece--chapter' : '';
+      const chapterBadge = isChapter ? `<span class="chapter-badge">Bibliografía de Estudio</span>` : '';
+
       if (group) {
-        html += `<section class="piece" data-piece="group" aria-labelledby="${block.id}">
+        html += `<section class="piece${chapterClass}" data-piece="group" aria-labelledby="${block.id}">
+          ${chapterBadge}
           <h${block.level} class="piece__title" id="${block.id}">${inline(block.text)}</h${block.level}>
           <div class="piece__body">${body}</div>
         </section>`;
@@ -549,8 +562,9 @@ function renderPieces(blocks, index, parentLevel) {
         cardCount += 1;
         const question = /[?¿]/.test(block.plain);
         const show = question ? 'Ver respuesta' : 'Mostrar';
-        html += `<section class="piece" data-piece="card">
+        html += `<section class="piece${chapterClass}" data-piece="card">
           <div class="piece__bar">
+            ${chapterBadge}
             <h${block.level} class="piece__title" id="${block.id}">${inline(block.text)}</h${block.level}>
             <button type="button" class="btn btn--secondary btn--sm piece__toggle" data-action="toggle-answer" data-label="${show}" aria-expanded="false" aria-controls="answer-${block.id}">${show}</button>
           </div>
