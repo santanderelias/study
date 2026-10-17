@@ -746,3 +746,740 @@ ul {
 .text-muted {
   color: var(--text-muted);
 }
+
+/* ==========================================================================
+   Library & Economics Study Module Styles
+   ========================================================================== */
+
+/* --- Reading progress bar --- */
+.readbar {
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: transparent;
+  z-index: 99;
+}
+
+.readbar [data-readbar-fill] {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: var(--primary);
+  transition: width 100ms ease-out;
+}
+
+/* --- Library Headers & Mastheads --- */
+.lib-mast {
+  margin-bottom: 1.5rem;
+}
+
+.kicker {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+}
+
+.lib-mast h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.lede {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  max-width: 42rem;
+}
+
+/* --- Search Form --- */
+.lib-search {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.lib-search input[type="search"] {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  font-size: 0.95rem;
+}
+
+.lib-search input[type="search"]:focus {
+  outline: 2px solid var(--primary);
+  border-color: transparent;
+}
+
+/* --- Progress Meter & Course Stats --- */
+.course-progress {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.75rem;
+  box-shadow: var(--shadow);
+}
+
+.meter {
+  height: 8px;
+  background: var(--bg-muted);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.meter span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  transition: width 300ms ease;
+}
+
+.meter--lg {
+  height: 12px;
+  border-radius: 6px;
+}
+
+.course-progress p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* --- Unit Cards & Grid --- */
+.lib-section-label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.unit-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .unit-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.unit-card {
+  display: flex;
+  gap: 1rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+  color: inherit;
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.unit-card:hover {
+  text-decoration: none;
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.unit-card__num {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--primary);
+  opacity: 0.8;
+}
+
+.unit-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.unit-card__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.unit-card__sum {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 0.85rem;
+  line-height: 1.4;
+  flex: 1;
+}
+
+.unit-card__meta {
+  font-size: 0.775rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+/* --- Continue Reading Card --- */
+.continue {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, var(--primary-soft), var(--bg-elevated));
+  border: 1px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.75rem;
+  color: inherit;
+  box-shadow: var(--shadow);
+}
+
+.continue:hover {
+  text-decoration: none;
+  box-shadow: var(--shadow-lg);
+}
+
+.continue__kicker {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.continue__title {
+  display: block;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.continue__meta {
+  display: block;
+  font-size: 0.825rem;
+  color: var(--text-muted);
+}
+
+.continue__go {
+  padding: 0.4rem 0.85rem;
+  background: var(--primary);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* --- Document List --- */
+.doc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.doc-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  transition: border-color var(--transition);
+}
+
+.doc-row.is-studied {
+  border-color: var(--accent);
+  background: var(--bg);
+}
+
+.doc-row__link {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  color: inherit;
+  flex: 1;
+}
+
+.doc-row__link:hover {
+  text-decoration: none;
+}
+
+.doc-row__index {
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+.doc-row__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.doc-row__title {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.doc-row__sum {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* --- Badges & Chips --- */
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.725rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  width: fit-content;
+}
+
+.badge--teoria {
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.badge--repaso {
+  background: rgba(234, 179, 8, 0.15);
+  color: #b45309;
+}
+
+[data-theme="dark"] .badge--repaso {
+  color: #fde047;
+}
+
+.badge--ejercicio {
+  background: rgba(13, 148, 136, 0.15);
+  color: var(--accent);
+}
+
+.chapter-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.725rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: var(--study-soft);
+  color: var(--study);
+  margin-bottom: 0.4rem;
+  border: 1px solid rgba(154, 52, 18, 0.2);
+}
+
+.bib-chip {
+  display: inline-block;
+  font-style: normal;
+  padding: 0.1rem 0.45rem;
+  border-radius: 4px;
+  font-size: 0.825em;
+  font-weight: 600;
+  background: var(--study-soft);
+  color: var(--study);
+  border: 1px solid rgba(154, 52, 18, 0.2);
+  margin: 0 0.15rem;
+}
+
+/* --- Mark Studied Button --- */
+.mark-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg);
+  cursor: pointer;
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.mark-btn__box {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  border: 2px solid var(--text-muted);
+  display: inline-block;
+  position: relative;
+}
+
+.mark-btn[aria-pressed="true"] {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(13, 148, 136, 0.1);
+}
+
+.mark-btn[aria-pressed="true"] .mark-btn__box {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+/* --- Breadcrumb & Pager --- */
+.crumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.crumb__sep {
+  opacity: 0.5;
+}
+
+.pager {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.pager__link {
+  display: flex;
+  flex-direction: column;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+  color: inherit;
+  transition: border-color var(--transition);
+}
+
+.pager__link:hover {
+  text-decoration: none;
+  border-color: var(--primary);
+}
+
+.pager__link--next {
+  text-align: right;
+}
+
+.pager__dir {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.pager__name {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.pager__unit {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.pager__pos {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+/* --- Reader View, TOC & Study Pieces --- */
+.lib-reader {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media (min-width: 960px) {
+  .lib-reader {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    align-items: start;
+    gap: 2rem;
+  }
+}
+
+/* Mobile-first touch targets and Zen readability */
+@media (max-width: 767px) {
+  .module-root {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .lib-mast h1 {
+    font-size: 1.5rem;
+  }
+
+  .reader-head {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .reader-head h1 {
+    font-size: 1.45rem;
+  }
+
+  .piece {
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+    margin-bottom: 1rem;
+  }
+
+  .piece__title {
+    font-size: 1.025rem;
+  }
+
+  .piece__body, .piece__answer {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .mark-btn, .btn, .seg button {
+    min-height: 42px;
+  }
+
+  .doc-row {
+    padding: 0.85rem;
+  }
+
+  .reader-tools {
+    position: sticky;
+    bottom: 0.75rem;
+    z-index: 90;
+    background: var(--bg-elevated);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.65rem 0.85rem;
+    margin-top: 1rem;
+    justify-content: space-between;
+  }
+}
+
+.lib-toc {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.85rem 1rem;
+  font-size: 0.875rem;
+  box-shadow: var(--shadow);
+}
+
+.lib-toc summary {
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.lib-toc nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+}
+
+.lib-toc__link {
+  color: var(--text-muted);
+  padding: 0.25rem 0.4rem;
+  border-radius: 4px;
+  line-height: 1.3;
+}
+
+.lib-toc__link[data-level="3"] {
+  padding-left: 1rem;
+  font-size: 0.825rem;
+}
+
+.lib-toc__link:hover,
+.lib-toc__link.is-active {
+  color: var(--primary);
+  background: var(--primary-soft);
+  text-decoration: none;
+}
+
+.reader-head {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.reader-kicker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.reader-head h1 {
+  font-size: 1.65rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+
+.reader-sum {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.reader-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border);
+}
+
+.seg {
+  display: inline-flex;
+  background: var(--bg-muted);
+  padding: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.seg button {
+  padding: 0.35rem 0.75rem;
+  border: none;
+  background: transparent;
+  font-size: 0.825rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+.seg button[aria-pressed="true"] {
+  background: var(--bg-elevated);
+  color: var(--primary);
+  box-shadow: var(--shadow);
+}
+
+.mode-note {
+  font-size: 0.775rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+/* --- Study Cards & Groups --- */
+.piece {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--shadow);
+  transition: border-color var(--transition);
+}
+
+.piece--chapter {
+  border-left: 4px solid var(--study);
+  background: linear-gradient(180deg, var(--study-soft), var(--bg-elevated) 40px);
+}
+
+.piece__bar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.piece__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.piece__toggle {
+  flex-shrink: 0;
+}
+
+.piece__answer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.piece__body p,
+.piece__answer p {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.piece__body p:last-child,
+.piece__answer p:last-child {
+  margin-bottom: 0;
+}
+
+.piece__body ul,
+.piece__answer ul,
+.piece__body ol,
+.piece__answer ol {
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.piece__body li,
+.piece__answer li {
+  margin-bottom: 0.35rem;
+  line-height: 1.5;
+}
+
+/* Reading mode forces answers visible */
+.reader-body.is-reading .piece__answer {
+  display: block !important;
+}
+
+.reader-body.is-reading .piece__toggle {
+  display: none !important;
+}
+
+/* --- Math & Formulas --- */
+.math-display {
+  padding: 0.75rem 1rem;
+  margin: 0.85rem 0;
+  background: var(--bg-muted);
+  border-radius: var(--radius-sm);
+  overflow-x: auto;
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  text-align: center;
+}
+
+.math-fallback {
+  font-family: var(--serif);
+  font-weight: 600;
+  color: var(--primary);
+}

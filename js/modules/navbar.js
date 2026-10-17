@@ -45,8 +45,8 @@ export class NavbarModule {
 
     return `
       <nav class="navbar" aria-label="Main navigation">
-        <button type="button" class="navbar__brand" data-nav-id="0" title="Go home">
-          Modular App
+        <button type="button" class="navbar__brand" data-nav-id="0" title="Economía II - Inicio">
+          Economía II
         </button>
         <button
           type="button"
