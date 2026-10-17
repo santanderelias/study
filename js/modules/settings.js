@@ -4,6 +4,7 @@
  */
 
 import { Module } from './base.js';
+import { clearProgress } from '../lib/progress.js';
 
 export const THEME_KEY = 'app-theme';
 export const LAST_MODULE_KEY = 'app-last-module';
@@ -34,14 +35,15 @@ export function applyTheme(theme) {
   } catch {
     /* ignore */
   }
+  window.dispatchEvent(new CustomEvent('themechange', { detail: theme }));
 }
 
 export class SettingsModule extends Module {
   constructor() {
     super({
       id: 99,
-      name: 'Settings',
-      navLabel: 'Settings',
+      name: 'Ajustes',
+      navLabel: 'Ajustes',
       navOrder: 99,
     });
   }

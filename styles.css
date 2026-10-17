@@ -24,7 +24,11 @@
   --radius-sm: 8px;
   --nav-height: 56px;
   --font: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, sans-serif;
+  --serif: Georgia, "Iowan Old Style", Palatino, "Palatino Linotype", serif;
+  --study: #9a3412;
+  --study-soft: rgba(154, 52, 18, 0.12);
   --transition: 180ms ease;
+  color-scheme: light;
 }
 
 [data-theme="dark"] {
@@ -43,6 +47,9 @@
   --danger-soft: rgba(248, 113, 113, 0.15);
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.2);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --study: #fdba74;
+  --study-soft: rgba(253, 186, 116, 0.16);
+  color-scheme: dark;
 }
 
 /* --- Reset --- */
